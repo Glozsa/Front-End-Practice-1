@@ -1,0 +1,100 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+}
+
+div.main {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    max-width: 768px;
+    min-width: 320px;
+    height: 60%;
+}
+
+div.main div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    height: 80%;
+    padding: 30px;
+}
+
+div.sedans {
+    background-color: #e38525;
+    border-radius: 10px 0 0 10px;
+    transition: width .3s ease-in-out;
+}
+
+div.suvs {
+    background-color: #016871;
+    transition: width .3s ease-in-out;
+}
+
+div.luxury {
+    background-color: #003f3e;
+    border-radius: 0 10px 10px 0;
+    transition: width .3s ease-in-out;
+}
+
+h1, p {
+    color: white;
+    flex-grow: 1;
+}
+
+.sedans button {
+    color: #e38525;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    width: 60%;
+}
+
+.suvs button {
+    color: #016871;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    width: 60%;
+}
+
+.luxury button {
+    color: #003f3e;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    width: 60%;
+}
+
+img {
+    width: 25%;
+    justify-content: left;
+}
+
+button {
+    padding: 10px;
+}
+
+button:active {
+    color: white;
+    font-size: 13px;
+    background-color: transparent;
+    border: solid 2px white;
+    width: 60%;
+    height: 38.4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
