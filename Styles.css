@@ -1,5 +1,9 @@
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
 }
 
 html {
@@ -10,24 +14,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100vh;
     background-color: white;
 }
 
-div.main {
+main {
     display: flex;
     flex-direction: row;
     width: 50%;
     max-width: 768px;
     min-width: 320px;
-    height: 60%;
+    padding: 20px;
 }
 
-div.main div {
+main div {
     display: flex;
     flex-direction: column;
     width: calc(100% / 3);
-    height: 80%;
     padding: 30px;
 }
 
@@ -80,6 +83,8 @@ h1, p {
 img {
     width: 25%;
     justify-content: left;
+    color: white;
+    font-size: 10px;
 }
 
 button {
@@ -97,4 +102,26 @@ button:active {
 
 button:hover {
     cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    main {
+        flex-direction: column;
+    }
+
+    main div {
+        width: 100%;
+    }
+
+    div.sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    div.luxury {
+        border-radius: 0 0 10px 10px;
+    }
+
+    button {
+        width: 50%;
+    }
 }
