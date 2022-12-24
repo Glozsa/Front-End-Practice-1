@@ -146,7 +146,7 @@ button {
     main {
         top: none;
         margin: 100px 0;
-        transform: translate(-65%, 0%);
+        transform: translate(calc(-100% / 3 * 2), 0%);
         width: 75%;
         position: relative;
         height: 75%;
