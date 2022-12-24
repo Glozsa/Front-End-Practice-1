@@ -1,127 +1,231 @@
 * {
+    font-size: 15px;
     font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
 }
 
 h1 {
+    font-size: 30px;
     font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
 }
 
 html {
-    height: 100%;
+    width: 100%;
 }
 
 body {
     display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: white;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    max-width: 768px;
-    min-width: 320px;
-    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: grid;
+    width: 65%;
+    grid-template-columns: auto;
 }
 
-main div {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% / 3);
-    padding: 30px;
+.sedanimg {
+    grid-column: 1 / 2;
+    grid-row: 1;
 }
 
-div.sedans {
-    background-color: #e38525;
-    border-radius: 10px 0 0 10px;
-    transition: width .3s ease-in-out;
+.suvimg {
+    grid-column: 3 / 4;
+    grid-row: 1;
 }
 
-div.suvs {
-    background-color: #016871;
-    transition: width .3s ease-in-out;
+.luxuryimg {
+    grid-column: 5 / 6;
+    grid-row: 1;
 }
 
-div.luxury {
-    background-color: #003f3e;
-    border-radius: 0 10px 10px 0;
-    transition: width .3s ease-in-out;
+.sedanh1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
 }
 
-h1, p {
-    color: white;
-    flex-grow: 1;
+.suvh1 {
+    grid-column: 3 / 4;
+    grid-row: 2;
 }
 
-.sedans button {
-    color: #e38525;
-    background-color: white;
-    border-radius: 25px;
-    border: none;
-    width: 60%;
+.luxuryh1 {
+    grid-column: 5 / 6;
+    grid-row: 2;
 }
 
-.suvs button {
-    color: #016871;
-    background-color: white;
-    border-radius: 25px;
-    border: none;
-    width: 60%;
+.sedanp {
+    grid-column: 1 / 2;
+    grid-row: 3;
 }
 
-.luxury button {
-    color: #003f3e;
-    background-color: white;
-    border-radius: 25px;
-    border: none;
-    width: 60%;
+.suvp {
+    grid-column: 3 / 4;
+    grid-row: 3;
 }
 
-img {
-    width: 25%;
-    justify-content: left;
-    color: white;
-    font-size: 10px;
+.luxuryp {
+    grid-column: 5 / 6;
+    grid-row: 3;
 }
 
-button {
-    padding: 10px;
+.sedanbutton {
+    color: hsl(31, 77%, 52%);
+    width: fit-content;
+    grid-column: 1 / 2;
+    grid-row: 4;
 }
 
-button:active {
-    color: white;
-    font-size: 13px;
-    background-color: transparent;
-    border: solid 2px white;
-    width: 60%;
-    height: 38.4px;
+.suvbutton {
+    color: hsl(184, 100%, 22%);
+    width: fit-content;
+    grid-column: 3 / 4;
+    grid-row: 4;
+}
+
+.luxurybutton {
+    color: hsl(179, 100%, 13%);
+    width: fit-content;
+    grid-column: 5 / 6;
+    grid-row: 4;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 1300px) {
+button:active {
+    box-shadow:0px 0px 0px 2px hsl(0, 0%, 95%) inset;
+    color: hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+.sedanbackground {
+    border-radius: 20px 0 0 20px;
+    background-color: hsl(31, 77%, 52%);
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+}
+
+.suvbackground {
+    background-color: hsl(184, 100%, 22%);
+    grid-column: 3 / 4;
+    grid-row: 1 / 5;
+}
+
+.luxurybackground {
+    border-radius: 0 20px 20px 0;
+    background-color: hsl(179, 100%, 13%);
+    grid-column: 5 / 6;
+    grid-row: 1 / 5;
+}
+
+img, h1, p, button {
+    margin: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 810px) {
+
     main {
-        flex-direction: column;
+        top: none;
+        margin: 100px 0;
+        transform: translate(-65%, 0%);
+        width: 75%;
+        position: relative;
+        height: 75%;
     }
 
-    main div {
-        width: 100%;
+    .sedanimg {
+        grid-column: 1 / 2;
+        grid-row: 1;
     }
-
-    div.sedans {
-        border-radius: 10px 10px 0 0;
+    
+    .suvimg {
+        grid-column: 1 / 2;
+        grid-row: 5;
     }
-
-    div.luxury {
-        border-radius: 0 0 10px 10px;
+    
+    .luxuryimg {
+        grid-column: 1 / 2;
+        grid-row: 9;
     }
-
-    button {
-        width: 50%;
+    
+    .sedanh1 {
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    
+    .suvh1 {
+        grid-column: 1 / 2;
+        grid-row: 6;
+    }
+    
+    .luxuryh1 {
+        grid-column: 1 / 2;
+        grid-row: 10;
+    }
+    
+    .sedanp {
+        grid-column: 1 / 2;
+        grid-row: 3;
+    }
+    
+    .suvp {
+        grid-column: 1 / 2;
+        grid-row: 7;
+    }
+    
+    .luxuryp {
+        grid-column: 1 / 2;
+        grid-row: 11;
+    }
+    
+    .sedanbutton {
+        grid-column: 1 / 2;
+        grid-row: 4;
+    }
+    
+    .suvbutton {
+        grid-column: 1 / 2;
+        grid-row: 8;
+    }
+    
+    .luxurybutton {
+        grid-column: 1 / 2;
+        grid-row: 12;
+    }
+    
+    .sedanbackground {
+        border-radius: 20px 20px 0 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / 5;
+    }
+    
+    .suvbackground {
+        grid-column: 1 / 2;
+        grid-row: 5 / 9;
+    }
+    
+    .luxurybackground {
+        border-radius: 0 0 20px 20px;
+        grid-column: 1 / 2;
+        grid-row: 9 / 13;
     }
 }
