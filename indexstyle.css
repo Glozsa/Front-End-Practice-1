@@ -141,7 +141,7 @@ button {
     background-color: hsl(0, 0%, 95%);
 }
 
-@media (max-width: 810px) {
+@media (max-width: 640px) {
 
     main {
         top: none;
